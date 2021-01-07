@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Search from './components/Search/Search';
+import Details from './components/Details/Details';
+import MapRender from './components/MapRender/MapRender';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/pattern-bg.png)`, backgroundRepeat: 'no-repeat' }}>
+      <Search />
+      <Details />
+      <MapRender />
     </div>
   );
 }
